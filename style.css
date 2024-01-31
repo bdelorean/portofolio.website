@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&family=Quicksand&display=swap');
+:root{
+  --main-color: #312E2E;
+  --background-color: aliceblue; 
+  --accent-color: #EE819C;
+  --inactive-color: rgb(188, 186, 186) ;
+  --font-size-resp: 15px;
+ 
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color);
+  font-family: Quicksand;
+}
+nav {
+  width: 10vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--main-color);
+  /*transform: translateX(-100%);*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+li {
+  list-style-type: none;
+  color: white;
+  
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.nav_icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px;
+  gap: 15px;
+  width: 100%;
+}
+.nav_icons-edit{
+  width: 25px;
+}
+
+.design {
+  display: flex;
+  justify-items: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  background-color: var(--main-color);
+  height: 100%;
+  width: 45%;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 20% 100%, 0 70%);
+  
+}
+h1{
+  margin-top: 50px;
+  margin-left: 55%;
+  font-weight: normal;
+  color: var(--main-color);
+}
+h2{
+  margin-left: 51%;
+  font-weight: normal;
+  color: var(--main-color);
+}
+ h1,h2{
+ text-shadow: 4px 5px var(--main-color);
+  font-size: 4rem;
+
+  mix-blend-mode: difference;
+  color: aliceblue;
+  
+ }
+ .foto_home{
+  height: 300px;
+  width: 290px;
+  position: absolute;
+  right: 0;
+  margin-right: 15%;
+  margin-top: 5%;
+  border-radius: 5px;
+  
+ }
+ .groet_home{
+  margin-left: 300px;
+  font-size: 35px;
+  font-style: italic;
+  max-width: 35%;
+  font-weight:50;
+  font-family: Quicksand ;
+ }
+  span {
+    color: var(--accent-color);
+    
+  }
+  .skills{
+    margin-top: 50px;
+    margin-left: 300px;
+  } 
+  .subtitle::before{
+    content: url(./img/icons8-stars-48.png);
+  }
+  .skills_list {
+    gap: 15px;
+    color: #191610;
+    list-style: none;
+    font-style: italic;
+    
+  }
+  .skills_list--item::before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    background-image: url(./img/icons8-stars-48.png);
+  }
+  .skills_list--item {
+    color: #191610;
+   margin-left: -1150px;
+    
+  }
+  
+  h3 {
+    position: relative;
+    color: var(--accent-color);
+    border-bottom: 1px solid #EE819C;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 150;
+    font-size: 35px;
+    font-style: italic;
+    margin-bottom: 15px;
+
+  }
+  h4{
+    color:#EE819C;
+    position: relative;
+    left: 20%;
+    margin-top: 5%;
+    font-size: 50px;
+    font-weight: normal;
+    font-style: italic;
+    border-bottom: 1px solid #EE819C;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+  }
+  .aboutme{
+    position: relative;
+    width: 55%;
+    left: 20%;
+    font-size: 20px;
+    line-height: 50px;
+    text-indent: 35px;
+    font-style: italic;
+    color: var(--inactive-color);
+    z-index: -10;
+  }
+  .hide_div{
+    transform: translateX(50%);
+    transition: transform 3s ease-in-out;
+  }
+  .project1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-style: italic;
+    position: relative;
+   
+    padding-bottom: 20px;
+    gap: 10vw;
+    
+    
+  }
+  .border {
+    width: 80vw;
+    border-bottom: 1px solid lightgray;
+    display: inline-block;
+    margin-left: 15%;
+    
+  }
+    .project2{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      font-style: italic;
+      padding-bottom: 20px;
+      margin-left: 5vw;
+      gap: 10vw;
+      margin-top: 1vh;
+    }
+   .project3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 5vw;
+    gap: 10vw;
+    margin-top: 1vh;
+   }  
+  .project_img {
+    width: 200px;
+    height: 110px;
+    margin-left: 200px;
+    border-radius: 15px;
+    margin-top: 15px;
+  }
+.project_desc {
+  max-width: 80%;
+  line-height: 30px;
+  text-wrap: balance;
+}
+h5{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.contact_info{
+  text-align: left;
+}
+.contact_info--li {
+  color:  #191610;
+  padding: 20px;
+  font-style: italic;
+  font-weight: bold;
+  
+}
+.contact{
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80vw;
+  height: 100%;
+}
+.contact_foto--img{
+  height: 50vh;
+  position: absolute;
+  right: 90px;
+}
+.background {
+  position: absolute;
+  height: 70vh;
+  width: 350px;
+  background-color: lightgrey;
+  clip-path: polygon(41% 0, 94% 23%, 46% 100%, 0 57%);
+}
+.nav__toggle {  /*responsive navbar */
+  display: none;
+}
+@media screen and (max-width: 767px){
+  .design{
+    display: none;
+  }
+  nav{
+    display: none;
+  }
+  .foto_home{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  .title{
+    display: none;
+  }
+  .groet_home{
+    font-size: var(--font-size-resp);
+  }
+  .skills{
+    font-size: 20px;
+  }
+  .home_responsive{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
