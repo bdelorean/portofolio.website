@@ -18,6 +18,7 @@ body {
   height: 100vh;
   background-color: var(--background-color);
   font-family: Quicksand;
+  position: relative;
 }
 nav {
   width: 10vw;
@@ -129,19 +130,15 @@ h2{
     font-style: italic;
     
   }
-  .skills_list--item::before {
-    content: '';
-    display: inline-block;
-    width: 25px;
-    background-image: url(./img/icons8-stars-48.png);
-  }
+  
   .skills_list--item {
+    position: relative;
     color: #191610;
-   margin-left: -1150px;
+    margin-left: -1150px;
     
   }
   
-  h3 {
+  .skills_title {
     position: relative;
     color: var(--accent-color);
     border-bottom: 1px solid #EE819C;
@@ -270,6 +267,9 @@ h5{
 .nav__toggle {  /*responsive navbar */
   display: none;
 }
+footer{
+  display: none;
+}
 @media screen and (max-width: 767px){
   .design{
     display: none;
@@ -281,6 +281,7 @@ h5{
     border-radius: 50%;
     width: 150px;
     height: 150px;
+    position: relative;
   }
   .title{
     display: none;
@@ -292,9 +293,22 @@ h5{
     font-size: 20px;
   }
   .home_responsive{
-    height: 100%;
+    height: 100vw;
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+  .skills_list--item{
+    color: #191610;
+  }
+  footer{
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
   }
 }
 
