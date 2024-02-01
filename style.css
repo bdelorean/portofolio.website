@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Istok+Web&family=Quicksand&display=swap');
 :root{
-  --main-color: #312E2E;
-  --background-color: aliceblue; 
+  --main-color: #100f0f;
+  --background-color: white; /*om de mix-blend-mode te werken */
   --accent-color: #EE819C;
   --inactive-color: rgb(188, 186, 186) ;
   --font-size-resp: 15px;
@@ -15,23 +15,21 @@
 }
 body {
   width: 100vw;
-  
+  height: 100vh;
   background-color: var(--background-color);
   font-family: Quicksand;
   position: relative;
 }
 nav {
   width: 10vw;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
   background-color: var(--main-color);
-  /*transform: translateX(-100%);*/
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   flex-direction: column;
 }
 ul {
@@ -61,22 +59,22 @@ a{
   width: 25px;
 }
 
-.design {
+.design {  /*die zwarte gedeelde van de home pagina*/
   display: flex;
   justify-items: flex-end;
   align-items: flex-end;
   position: absolute;
   background-color: var(--main-color);
-  height: 100vh;
+  height: 100%;
   width: 45%;
   right: 0;
   top: 0;
-  z-index: -1;
+  z-index: -1; /*om de foto zichtbaar te zijn*/
   clip-path: polygon(30% 0, 100% 0, 100% 100%, 20% 100%, 0 70%);
   
 }
 h1{
-  margin-top: 50px;
+  
   margin-left: 55%;
   font-weight: normal;
   color: var(--main-color);
@@ -86,10 +84,9 @@ h2{
   font-weight: normal;
   color: var(--main-color);
 }
- h1,h2{
+.home_title,.home_subtitle{
  text-shadow: 4px 5px var(--main-color);
   font-size: 4rem;
-
   mix-blend-mode: difference;
   color: aliceblue;
   
@@ -134,7 +131,7 @@ h2{
   .skills_list--item {
     position: relative;
     color: #191610;
-    margin-left: -1150px;
+    margin-left: -1150px; /* zonder negatieve px kon ik niet onders de SKILLS plaatsen*/
     
   }
   
@@ -151,7 +148,7 @@ h2{
     margin-bottom: 15px;
 
   }
-  h4{
+  h4{  /*als ik h1 of h2 gebruikt dan gedraag die ding raar*/
     color:#EE819C;
     position: relative;
     left: 20%;
@@ -176,7 +173,7 @@ h2{
     color: var(--inactive-color);
     z-index: -10;
   }
-  .hide_div{
+  .hide_div{ /* ik heb deze clas voor JS gemaakt*//*als de mouse komt over de text deze clas moet active zijn*/
     transform: translateX(50%);
     transition: transform 3s ease-in-out;
   }
@@ -186,14 +183,13 @@ h2{
     justify-content: center;
     font-style: italic;
     position: relative;
-   
     padding-bottom: 20px;
     gap: 10vw;
     
     
   }
-  .border {
-    width: 80vw;
+  .border {  /* die lijn tussen de projecten */
+    width: 80vw; /* om de lijn korter dan de pagina zijn */
     border-bottom: 1px solid lightgray;
     display: inline-block;
     margin-left: 15%;
@@ -263,18 +259,20 @@ margin-top: 10%;
   
 }
 .background {
-  margin-top: 70px;
+  margin-top: 50%;
   position: relative;
-  height: 70vh;
+  height: 60vh;
   width: 350px;
   background-color: lightgrey;
   clip-path: polygon(41% 0, 94% 23%, 46% 100%, 0 57%);
+  margin-bottom: 40px;
 }
 
-footer{
+
+footer{  /* deze footer moet zichtbaar voor mobile versie zijn */
   display: none;
 }
-.nav__toggle{
+.nav__toggle{ /* voor de responsive navbar */
   display: none;
 }
 @media screen and (max-width: 767px){
@@ -282,7 +280,7 @@ footer{
     display: none;
   }
   nav{
-    translate: -100%;
+    translate: -100%; /* met display:none kon ik de button (togglebtn) niet zien daarom translate*/
   }
  
   .bar{
@@ -325,8 +323,9 @@ footer{
     width: 100%;
     margin-top: 10px;
     height: 50px;
-    
+    bottom:0 ;
   }
+ 
   h4{
     font-size: 2rem;
   }
@@ -351,6 +350,7 @@ footer{
   }
   .project_desc{
     margin-left: 10px;
+    margin-bottom: 70px;
   }
   h5{
     margin-left: 10px;
@@ -367,10 +367,9 @@ footer{
     position: absolute;
     background-color: #EE819C;
     top: 0;
-    
     margin-left: 200px;
-    width: 700px;
-    z-index: 5;
+    z-index: -1;
+    width: 100vw;
   }
   .nav_links a:hover {
     background-color: aliceblue;
@@ -411,6 +410,26 @@ footer{
   }
   .travelly{
     margin-left: 30px;
+  }
+  .home{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .foto_home{
+    position: relative;
+    
+  }
+  .skills_list--item{
+    margin-left: 10px;
+  }
+  .background{
+    margin-top: 10%;
+    height: 50vh;
+    position: relative;
+    
   }
   
 }
