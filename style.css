@@ -399,6 +399,19 @@ footer{
     justify-content: center;
     align-items: center;
   }
+  .nav_icons{
+    display: none;
+  }
+  .border{
+    width: 80vw;
+    margin-left: 30px;
+  }
+  .travelly_img{
+    margin-left: 40px;
+  }
+  .travelly{
+    margin-left: 30px;
+  }
   
 }
 
