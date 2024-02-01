@@ -11,11 +11,18 @@
 <body>
 
     <header>
+        <button id="navToggleBtn" class="nav__toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
         <nav id="nav">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./aboutme.html">About Me</a></li>
-            <li><a href="./projecten.html">Projecten</a></li>
-            <li><a href="./contact.html">Contact</a></li>
+            <ul id="navLinks" class="nav_links active">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./aboutme.html">About Me</a></li>
+                <li><a href="./projecten.html">Projecten</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
             <div class="nav_icons">
                 <a href="https://www.facebook.com/Bia.Moldoveanu" target="_blank"><img
                         src="./img/icons8-facebook-50.png" alt="" class="nav_icons-edit"></a>
@@ -24,7 +31,9 @@
                 <a href="mailto:bia.delorean@gmail.com"><img src="./img/icons8-mail-50.png" alt=""
                         class="nav_icons-edit"></a>
             </div>
+
         </nav>
+
     </header>
 
     <main class="projecten">
@@ -72,13 +81,15 @@
         </section>
     </main>
     <footer>
-        <a href="https://www.facebook.com/Bia.Moldoveanu" target="_blank"><img
-            src="./img/icons8-facebook-50.png" alt="" class="nav_icons-edit"></a>
-    <a href="https://github.com/bdelorean" target="_blank"><img src="./img/icons8-github-50.png" alt=""
-            class="nav_icons-edit"></a>
-    <a href="mailto:bia.delorean@gmail.com"><img src="./img/icons8-mail-50.png" alt=""
-            class="nav_icons-edit"></a> 
+        <a href="https://www.facebook.com/Bia.Moldoveanu" target="_blank"><img src="./img/icons8-facebook-50.png" alt=""
+                class="nav_icons-edit"></a>
+        <a href="https://github.com/bdelorean" target="_blank"><img src="./img/icons8-github-50.png" alt=""
+                class="nav_icons-edit"></a>
+        <a href="mailto:bia.delorean@gmail.com"><img src="./img/icons8-mail-50.png" alt="" class="nav_icons-edit"></a>
     </footer>
+
+
+    <script src="app.js"></script>
 </body>
 
 </html>
