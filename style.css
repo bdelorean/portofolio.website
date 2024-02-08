@@ -1,123 +1,117 @@
-@import url('https://fonts.googleapis.com/css2?family=Istok+Web&family=Quicksand&display=swap');
-:root{
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web&family=Quicksand&display=swap");
+:root {
   --main-color: #100f0f;
   --background-color: white; /*om de mix-blend-mode te werken */
-  --accent-color: #EE819C;
-  --inactive-color: rgb(188, 186, 186) ;
+  --accent-color: #ee819c;
+  --inactive-color: rgb(188, 186, 186);
   --font-size-resp: 15px;
- 
 
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    font-family: Quicksand;
+    position: relative;
+  }
+  nav {
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  li {
+    list-style-type: none;
+    color: white;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  .nav_icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px;
+    gap: 15px;
+    width: 100%;
+  }
+  .nav_icons-edit {
+    width: 25px;
+  }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--background-color);
-  font-family: Quicksand;
-  position: relative;
-}
-nav {
-  width: 10vw;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: var(--main-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-li {
-  list-style-type: none;
-  color: white;
-  
-}
-a{
-  text-decoration: none;
-  color: white;
-}
-.nav_icons{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 15px;
-  gap: 15px;
-  width: 100%;
-}
-.nav_icons-edit{
-  width: 25px;
-}
-
-.design {  /*die zwarte gedeelde van de home pagina*/
-  display: flex;
-  justify-items: flex-end;
-  align-items: flex-end;
-  position: absolute;
-  background-color: var(--main-color);
-  height: 100%;
-  width: 45%;
-  right: 0;
-  top: 0;
-  z-index: -1; /*om de foto zichtbaar te zijn*/
-  clip-path: polygon(30% 0, 100% 0, 100% 100%, 20% 100%, 0 70%);
-  
-}
-h1{
-  
-  margin-left: 55%;
-  font-weight: normal;
-  color: var(--main-color);
-}
-h2{
-  margin-left: 51%;
-  font-weight: normal;
-  color: var(--main-color);
-}
-.home_title,.home_subtitle{
- text-shadow: 4px 5px var(--main-color);
-  font-size: 4rem;
-  mix-blend-mode: difference;
-  color: aliceblue;
-  
- }
- .foto_home{
-  height: 300px;
-  width: 290px;
-  position: absolute;
-  right: 0;
-  margin-right: 15%;
-  margin-top: 5%;
-  border-radius: 5px;
-  
- }
- .groet_home{
-  margin-left: 300px;
-  font-size: 35px;
-  font-style: italic;
-  max-width: 35%;
-  font-weight:50;
-  font-family: Quicksand ;
- }
+  .design {
+    /*die zwarte gedeelde van de home pagina*/
+    display: flex;
+    justify-items: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    background-color: var(--main-color);
+    height: 100%;
+    width: 45%;
+    right: 0;
+    top: 0;
+    z-index: -1; /*om de foto zichtbaar te zijn*/
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 20% 100%, 0 70%);
+  }
+  h1 {
+    margin-left: 55%;
+    font-weight: normal;
+    color: var(--main-color);
+  }
+  h2 {
+    margin-left: 51%;
+    font-weight: normal;
+    color: var(--main-color);
+  }
+  .home_title,
+  .home_subtitle {
+    text-shadow: 4px 5px var(--main-color);
+    font-size: 4rem;
+    mix-blend-mode: difference;
+    color: aliceblue;
+  }
+  .foto_home {
+    height: 45vh;
+    width: 290px;
+    position: absolute;
+    right: 0;
+    margin-right: 15%;
+    margin-top: 5%;
+    border-radius: 5px;
+  }
+  .groet_home {
+    margin-left: 300px;
+    font-size: 35px;
+    font-style: italic;
+    max-width: 35%;
+    font-weight: 50;
+    font-family: Quicksand;
+  }
   span {
     color: var(--accent-color);
-    
   }
-  .skills{
+  .skills {
     margin-top: 50px;
     margin-left: 300px;
-  } 
-  .subtitle::before{
+  }
+  .subtitle::before {
     content: url(./img/icons8-stars-48.png);
   }
   .skills_list {
@@ -125,20 +119,18 @@ h2{
     color: #191610;
     list-style: none;
     font-style: italic;
-    
   }
-  
+
   .skills_list--item {
     position: relative;
     color: #191610;
     margin-left: -1150px; /* zonder negatieve px kon ik niet onders de SKILLS plaatsen*/
-    
   }
-  
+
   .skills_title {
     position: relative;
     color: var(--accent-color);
-    border-bottom: 1px solid #EE819C;
+    border-bottom: 1px solid #ee819c;
     display: inline-block;
     padding-left: 20px;
     padding-right: 20px;
@@ -146,23 +138,23 @@ h2{
     font-size: 35px;
     font-style: italic;
     margin-bottom: 15px;
-
   }
-  h4{  /*als ik h1 of h2 gebruikt dan gedraag die ding raar*/
-    color:#EE819C;
+  h4 {
+    /*als ik h1 of h2 gebruikt dan gedraagt die ding raar*/
+    color: #ee819c;
     position: relative;
     left: 20%;
     margin-top: 5%;
     font-size: 50px;
     font-weight: normal;
     font-style: italic;
-    border-bottom: 1px solid #EE819C;
+    border-bottom: 1px solid #ee819c;
     display: inline-block;
     padding-left: 20px;
     padding-right: 20px;
     margin-bottom: 30px;
   }
-  .aboutme{
+  .aboutme {
     position: relative;
     width: 55%;
     left: 20%;
@@ -173,7 +165,8 @@ h2{
     color: var(--inactive-color);
     z-index: -10;
   }
-  .hide_div{ /* ik heb deze clas voor JS gemaakt*//*als de mouse komt over de text deze clas moet active zijn*/
+  .hide_div {
+    /* ik heb deze clas voor JS gemaakt*/ /*als de mouse komt over de text deze clas moet active zijn*/
     transform: translateX(50%);
     transition: transform 3s ease-in-out;
   }
@@ -185,35 +178,33 @@ h2{
     position: relative;
     padding-bottom: 20px;
     gap: 10vw;
-    
-    
   }
-  .border {  /* die lijn tussen de projecten */
+  .border {
+    /* die lijn tussen de projecten */
     width: 80vw; /* om de lijn korter dan de pagina zijn */
     border-bottom: 1px solid lightgray;
     display: inline-block;
     margin-left: 15%;
-    
   }
-    .project2{
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      font-style: italic;
-      padding-bottom: 20px;
-      margin-left: 5vw;
-      gap: 10vw;
-      margin-top: 1vh;
-    }
-   .project3{
+  .project2 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-style: italic;
+    padding-bottom: 20px;
+    margin-left: 5vw;
+    gap: 10vw;
+    margin-top: 1vh;
+  }
+  .project3 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-left: 5vw;
     gap: 10vw;
     margin-top: 1vh;
-   }  
+  }
   .project_img {
     width: 200px;
     height: 110px;
@@ -221,218 +212,214 @@ h2{
     border-radius: 15px;
     margin-top: 15px;
   }
-.project_desc {
-  max-width: 80%;
-  line-height: 30px;
-  
-}
-h5{
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-.contact_info{
-margin-top: 10%;
-}
-.contact_info{
-  text-align: left;
-}
-.contact_info--li {
-  color:  #191610;
-  padding: 20px;
-  font-style: italic;
-  font-weight: bold;
-  
-}
-.contact{
-  display: flex;
-  flex-direction: row;
-  margin-left: 20%;
-  justify-content: space-around;
-  width: 80vw;
-  height: 100%;
-}
-.contact_foto--img{
-  height: 50vh;
-  position: absolute;
-  right: 90px;
-  z-index: 1;
-  
-}
-.background {
-  margin-top: 50%;
-  position: relative;
-  height: 60vh;
-  width: 350px;
-  background-color: lightgrey;
-  clip-path: polygon(41% 0, 94% 23%, 46% 100%, 0 57%);
-  margin-bottom: 40px;
-}
-
-
-footer{  /* deze footer moet zichtbaar voor mobile versie zijn */
-  display: none;
-}
-.nav__toggle{ /* voor de responsive navbar */
-  display: none;
-}
-@media screen and (max-width: 767px){
-  .design{
-    display: none;
+  .project_desc {
+    max-width: 80%;
+    line-height: 30px;
   }
-  nav{
-    translate: -100%; /* met display:none kon ik de button (togglebtn) niet zien daarom translate*/
-  }
- 
-  .bar{
-    width: 30px;
-    height: 1px;
-    margin: 4px;
-    background-color: var(--main-color);
-  }
-  .foto_home{
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    position: relative;
-  }
-  .title{
-    display: none;
-  }
-  .groet_home{
-    font-size: var(--font-size-resp);
-  }
-  .skills{
+  h5 {
     font-size: 20px;
+    margin-bottom: 10px;
   }
-  .home_responsive{
-    height: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .contact_info {
+    margin-top: 10%;
   }
-  .skills_list--item{
-    color: #191610;
-  }
-  footer{
-    background-color: var(--main-color);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    margin-top: 10px;
-    height: 50px;
-    bottom:0 ;
-  }
- 
-  h4{
-    font-size: 2rem;
-  }
-  .aboutme_alinea{
-    width: 95%;
-    font-size: 1rem;
-    color: #191610;
+  .contact_info {
     text-align: left;
   }
-  .contact{
+  .contact_info--li {
+    color: #191610;
+    padding: 20px;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .contact {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  .project1, .project2, .project3{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-  }
-  .project_desc{
-    margin-left: 10px;
-    margin-bottom: 70px;
-  }
-  h5{
-    margin-left: 10px;
-  }
-  .project_img{
-    margin-left: 25px;
-  }
-  .projecten footer {
-    bottom: unset;
-  }
-  .nav_links {
-    flex-direction: column;
-    display: none;
-    position: absolute;
-    background-color: #EE819C;
-    top: 0;
-    margin-left: 200px;
-    z-index: -1;
-    width: 100vw;
-  }
-  .nav_links a:hover {
-    background-color: aliceblue;
-    width: 100%;
-    color: var(--main-color);
-  }
-  .nav__toggle{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    right: 0;
-    margin-right: 20px;
-    margin-top: 10px;
-    border: unset;
-    background-color: aliceblue;
-    
-  }
-  .nav__toggle:hover{
-    cursor: pointer;
-  }
-  .active{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .nav_icons{
-    display: none;
-  }
-  .border{
+    flex-direction: row;
+    margin-left: 20%;
+    justify-content: space-around;
     width: 80vw;
-    margin-left: 30px;
+    height: 100%;
   }
-  .travelly_img{
-    margin-left: 40px;
-  }
-  .travelly{
-    margin-left: 30px;
-  }
-  .home{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .foto_home{
-    position: relative;
-    
-  }
-  .skills_list--item{
-    margin-left: 10px;
-  }
-  .background{
-    margin-top: 10%;
+  .contact_foto--img {
     height: 50vh;
-    position: relative;
-    
+    position: absolute;
+    right: 90px;
+    z-index: 1;
   }
-  
-}
+  .background {
+    margin-top: 50%;
+    position: relative;
+    height: 60vh;
+    width: 350px;
+    background-color: lightgrey;
+    clip-path: polygon(41% 0, 94% 23%, 46% 100%, 0 57%);
+    margin-bottom: 40px;
+  }
 
+  footer {
+    /* deze footer moet zichtbaar voor mobile versie zijn */
+    display: none;
+  }
+  .nav__toggle {
+    /* voor de responsive navbar */
+    display: none;
+  }
+  @media screen and (max-width: 767px) {
+    .design {
+      display: none;
+    }
+    nav {
+      translate: -100%; /* met display:none kon ik de button (togglebtn) niet zien daarom translate*/
+    }
 
+    .bar {
+      width: 30px;
+      height: 1px;
+      margin: 4px;
+      background-color: var(--main-color);
+    }
+    .foto_home {
+      border-radius: 50%;
+      box-shadow: 1px 1px 50px #be677d, -1px -1px 70px #ff9bbb;
+      width: 150px;
+      height: 150px;
+      position: relative;
+    }
+    .title {
+      display: none;
+    }
+    .groet_home {
+      font-size: var(--font-size-resp);
+    }
+    .skills {
+      font-size: 20px;
+    }
+    .home_responsive {
+      height: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .skills_list--item {
+      color: #191610;
+    }
+    footer {
+      background-color: var(--main-color);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      margin-top: 10px;
+      height: 50px;
+    }
+
+    h4 {
+      font-size: 2rem;
+      margin-left: 80px;
+    }
+    .aboutme_alinea {
+      width: 95%;
+      font-size: 1rem;
+      color: #191610;
+      text-align: left;
+    }
+    .contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .project1,
+    .project2,
+    .project3 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .project_desc {
+      margin-left: 150px;
+      margin-bottom: 70px;
+      max-width: 60vw;
+    }
+    h5 {
+      margin-left: 150px;
+    }
+    .project_img {
+      margin-left: 25px;
+    }
+    .projecten footer {
+      bottom: unset;
+    }
+    .nav_links {
+      flex-direction: column;
+      justify-content: center;
+      gap: 35px;
+      display: none;
+      position: absolute;
+      background-color: rgba(226, 160, 160, 0.5);
+      box-shadow: 0 4px 30px rgba(237, 202, 202, 0.1);
+      backdrop-filter: blur(5px);
+      top: 35px;
+      left: 60px;
+      width: 200%;
+      height: 100vh;
+    }
+    
+    .nav_links a:hover {
+      font-size: 20px;
+      text-decoration: underline;
+      color: var(--main-color);
+    }
+    .nav__toggle {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      margin-right: 20px;
+      margin-top: 10px;
+      border: unset;
+      background-color: var(--background-color);
+    }
+    .nav__toggle:hover {
+      cursor: pointer;
+    }
+    .active {
+      display: flex;
+    }
+    .nav_icons {
+      display: none;
+    }
+    .border {
+      width: 80vw;
+      margin-left: 30px;
+    }
+    .travelly_img {
+      margin-left: 40px;
+    }
+    .travelly {
+      margin-left: 30px;
+    }
+    .home {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .foto_home {
+      position: relative;
+    }
+    .skills_list--item {
+      margin-left: 10px;
+    }
+    .background {
+      margin-top: 10%;
+      height: 50vh;
+      position: relative;
+    }
+  }
 }
